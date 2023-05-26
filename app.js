@@ -12,17 +12,41 @@ app.get("/", function (req, res) {
     var today = new Date();
     var currentDay = today.getDay();
     var day = "";
-    
 
-    if (today.getDay() === 6 || today.getDay() === 0) {
-        day = "haftasonu";
-
-    }
    
-    else {
-        day = "haftaici";
-        res.render("list", {gunTuru: day })
-    };
+
+
+    
+    
+       
+        switch (currentDay) {
+            case 0:
+                day: "Pazar"
+                break;
+            case 1:
+                day: "Pazartesi"
+                break;
+            case 2:
+                day: "salı"
+                break;
+            case 3:
+                day: "çarşamba"
+                break;
+            case 4:
+                day: "Perşembe"
+                break;
+            case 5:
+                day: "cuma"
+                break;
+            case 6:
+                day: "cumartesi"
+                break;
+            default:
+                break;
+        } 
+        
+        res.render("list", { gunTuru: day })
+    
 
 });
 
