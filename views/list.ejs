@@ -15,7 +15,12 @@
     <li>v1</li>
     <li>v2</li>
     <li>v3</li>
-    <li><%= newlistItem %></li>
+    <li>v4</li>
+
+    <% for(var i=0; i<newlistItems.length; i++) { %>
+        <li><%=  newlistItems[i]  %></li>    
+    <% } %>
+
    </UL>
 
    <form action="/" method="post" class="formu">
