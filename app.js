@@ -6,7 +6,7 @@ var ejs = require("ejs");
 
 app.set('view engine', 'ejs');
 
-
+app.use(bodyParser.urlencoded({extended: true}));
 app.get("/", function (req, res) {
     var today = new Date();
    
@@ -23,6 +23,10 @@ app.get("/", function (req, res) {
     
 
 });
+app.post("/" , function (req, res) {
+    var item =req.body.newItem;
+    console.log(item);
+})
 
 
 app.listen(3000, function (req, res) {
