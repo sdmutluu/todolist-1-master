@@ -9,13 +9,10 @@
 </head>
 
 <body>
-   <h1>It's a <%= gunTuru %> !</h1>
+   <h1>Abi sen liberalmisin <%= gunTuru %> </h1>
 
    <UL>
-    <li>v1</li>
-    <li>v2</li>
-    <li>v3</li>
-    <li>v4</li>
+   
 
     <% for(var i=0; i<newlistItems.length; i++) { %>
         <li><%=  newlistItems[i]  %></li>    
@@ -26,7 +23,7 @@
    <form action="/" method="post" class="formu">
 
    <input type="text" name="newItem" >
-   <button type="submit" name="button">Ekle</button>
+   <button type="submit" name="list" value=<%= gunTuru %>>Ekle</button>
 
    </form>
 
